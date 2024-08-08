@@ -1,19 +1,20 @@
 (function() {
-    var intervalID;
+    var intervalID;  // ID to keep track of the interval
 
-    // Функция, вызываемая при загрузке скрипта на объект
+    // Function that gets called when the script is loaded
     this.preload = function(entityID) {
-        // Установка интервала для вывода сообщения каждую секунду
+        // Set an interval that logs a message every second
         intervalID = Script.setInterval(function() {
-            console.log("Сообщение выводится каждую секунду");
-        }, 1000); // 1000 миллисекунд = 1 секунда
+            console.log("Message logged every second");
+        }, 1000); // 1000 milliseconds = 1 second
     };
 
-    // Функция, вызываемая при удалении скрипта или объекта
+    // Function that gets called when the script is unloaded
     this.unload = function(entityID) {
-        // Очистка интервала при удалении скрипта
+        // Clear the interval when the script is unloaded
         if (intervalID) {
             Script.clearInterval(intervalID);
         }
     };
 })();
+
