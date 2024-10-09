@@ -5,8 +5,7 @@
     Portal.prototype = {
         // Метод, который вызывается при входе в объект
         enterEntity: function(id) {
-            print("Hello, World");
-            }));
+            print("Entity added");
         }
     };
 
